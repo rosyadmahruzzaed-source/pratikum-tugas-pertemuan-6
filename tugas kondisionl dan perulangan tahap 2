@@ -1,0 +1,23 @@
+# Program: nested_loop_grid.py
+# Deskripsi: Menampilkan grid angka menggunakan perulangan bertingkat
+# Penulis: Zaedrosyad
+# Tanggal: 28 Oktober 2025
+
+def tampilkan_grid(baris: int, kolom: int):
+    """
+    Fungsi untuk mencetak grid angka bertingkat.
+    Setiap baris dimulai dari nilai baris dan bertambah satu di setiap kolom.
+    
+    :param baris: Jumlah baris yang ingin ditampilkan
+    :param kolom: Jumlah kolom yang ingin ditampilkan
+    """
+    for i in range(baris):
+        for j in range(kolom + 1):
+            print(i + j, end=' ')
+        print()  # pindah ke baris berikutnya
+
+# Eksekusi program utama
+if __name__ == "__main__":
+    jumlah_baris = 9
+    jumlah_kolom = 10
+    tampilkan_grid(jumlah_baris, jumlah_kolom)
