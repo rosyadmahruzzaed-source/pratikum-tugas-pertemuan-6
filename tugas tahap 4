@@ -1,0 +1,30 @@
+# Program untuk mengevaluasi status gaji, keluarga, dan kepemilikan rumah
+
+# Input gaji dari pengguna
+gaji = int(input("Masukkan jumlah gaji Anda: "))
+
+# Input status keluarga (Y/T)
+status_keluarga = input("Sudah berkeluarga? (Y/T): ")
+berkeluarga = status_keluarga.upper() == "Y"
+
+# Input status kepemilikan rumah (Y/T)
+status_rumah = input("Punya rumah? (Y/T): ")
+punya_rumah = status_rumah.upper() == "Y"
+
+# Evaluasi gaji
+if gaji > 3000000:
+    print("Gaji sudah di atas UMR.")
+
+    # Evaluasi status keluarga
+    if berkeluarga:
+        print("Wajib ikut asuransi dan menabung untuk pensiun.")
+    else:
+        print("Tidak perlu ikut asuransi.")
+
+    # Evaluasi status kepemilikan rumah
+    if punya_rumah:
+        print("Wajib bayar pajak rumah.")
+    else:
+        print("Tidak wajib bayar pajak rumah.")
+else:
+    print("Gaji belum mencapai UMR.")
