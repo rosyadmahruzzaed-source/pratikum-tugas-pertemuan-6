@@ -1,0 +1,24 @@
+# Program Pemesanan Tiket Bioskop
+
+# Input tipe tiket
+tipe = input("Masukkan tipe tiket (reguler/vip): ").lower()
+
+# Input status member
+member = input("Apakah Anda memiliki kartu member? (ya/tidak): ").lower()
+
+# Tentukan harga dasar berdasarkan tipe tiket
+harga = 50000 if tipe == "reguler" else 100000 if tipe == "vip" else 0
+
+# Hitung diskon jika punya member
+diskon = 0.2 * harga if member == "ya" else 0
+
+# Hitung total harga
+total = harga - diskon
+
+# Tampilkan hasil
+if harga == 0:
+    print("Tipe tiket tidak valid.")
+else:
+    print(f"Harga tiket: Rp{harga:,}")
+    print(f"Diskon: Rp{diskon:,}")
+    print(f"Total yang harus dibayar: Rp{total:,}")
